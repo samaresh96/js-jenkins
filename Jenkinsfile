@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/samarebat96/js-jenkins.git'
+                git branch: 'master', url: 'https://github.com/samarebat96/js-jenkins.git',
+                credentialsId: 'github-token'
             }
         }
 
