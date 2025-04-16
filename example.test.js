@@ -1,4 +1,5 @@
-const { add } = require('./js-auto'); // Import your add function
+// example.test.js
+const { add } = require('./js-auto'); // Import the add function
 
 describe('add function', () => {
   // Basic functionality tests
@@ -27,7 +28,6 @@ describe('add function', () => {
     expect(add(999999, 1)).toBe(1000000);
   });
 
-  // Note: You might want to add error handling in your function for these cases
   test('returns NaN when one argument is not a number', () => {
     expect(add('2', 3)).toBe(NaN);
   });
