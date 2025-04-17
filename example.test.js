@@ -23,6 +23,9 @@ describe('add function', () => {
   test('handles decimal numbers', () => {
     expect(add(1.5, 2.5)).toBe(4);
   });
+  test('handles  numbers', () => {
+    expect(add(10, 2.5)).toBe(12.5);
+  });
 
   test('handles large numbers', () => {
     expect(add(999999, 1)).toBe(1000000);
@@ -35,4 +38,6 @@ describe('add function', () => {
   test('returns NaN when both arguments are not numbers', () => {
     expect(add('a', 'b')).toBe(NaN);
   });
+
+  
 });
