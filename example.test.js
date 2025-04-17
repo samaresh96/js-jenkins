@@ -26,6 +26,9 @@ describe('add function', () => {
   test('handles  numbers', () => {
     expect(add(10, 2.5)).toBe(12.5);
   });
+  test('handles  numbers', () => {
+    expect(add(0, 2.5)).toBe(2.5);
+  });
 
   test('handles large numbers', () => {
     expect(add(999999, 1)).toBe(1000000);
