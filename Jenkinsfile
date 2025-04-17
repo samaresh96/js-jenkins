@@ -10,20 +10,20 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/samaresh96/js-jenkins.git',
+                    url: 'https://github.com/samarebat96/js-jenkins.git',
                     credentialsId: 'github-token'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
                         sonar.login=${SONAR_TOKEN}
                     """
                     writeFile file: 'sonar-project.properties', text: sonarProperties
-                    sh 'sonar-scanner'
+                    bat 'sonar-scanner'
                 }
             }
         }
