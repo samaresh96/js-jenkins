@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/samarebat96/js-jenkins.git',
+                    url: 'https://github.com/samaresh96/js-jenkins.git',
                     credentialsId: 'github-token'
             }
         }
