@@ -46,12 +46,16 @@ pipeline {
         }
     }
 
-    post {
+     post {
         success {
-            echo 'Pipeline completed successfully!'
+            emailext body: "Pipeline completed successfully.", 
+                     subject: "Build Success", 
+                     to: "samareshshil165@gmail.com"
         }
         failure {
-            echo 'Pipeline failed!'
+            emailext body: "Pipeline failed. Check logs for details.", 
+                     subject: "Build Failure", 
+                     to: "samareshshil165@gmail.com"
         }
     }
 }
