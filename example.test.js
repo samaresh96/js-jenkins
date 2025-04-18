@@ -41,6 +41,10 @@ describe('add function', () => {
     expect(add(10, 1)).toBe(11);
   });
 
+     test('handles large numbers', () => {
+    expect(add(11, 1)).toBe(12);
+  });
+
   test('returns NaN when one argument is not a number', () => {
     expect(add('2', 3)).toBe(NaN);
   });
