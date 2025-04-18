@@ -41,8 +41,6 @@ pipeline {
                         sonar.host.url=${SONAR_HOST_URL}
                         sonar.login=${SONAR_TOKEN}
                     """
-                    writeFile file: 'sonar-project.properties', text: sonarProperties
-                    bat 'sonar-scanner'
                 }
             }
         }
